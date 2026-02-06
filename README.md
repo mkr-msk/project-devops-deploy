@@ -19,14 +19,14 @@ cr.yandex/crpgijcppnikm2kto13q/project-devops-deploy:latest
 ### Quick start with Docker
 
 Running the application in dev mode (with built-in H2 database):
-``bash
+```bash
 docker run --rm -p 8080:8080 -p 9090:9090 \
   -e SPRING_PROFILES_ACTIVE=dev \
   cr.yandex/crpgijcppnikm2kto13q/project-devops-deploy:latest
 ```
 
 Running in production mode (requires PostgreSQL):
-``bash
+```bash
 docker run --rm -p 8080:8080 -p 9090:9090 \
   -e SPRING_PROFILES_ACTIVE=prod \
   -e SPRING_DATASOURCE_URL=jdbc:postgresql://host:5432/bulletins \
@@ -42,8 +42,8 @@ The app will be available after launch.:
 - Actuator (monitoring): http://localhost:9090/actuator
 
 ### Make commands for Docker
-``bash
+```bash
 make docker-build # Build Docker image locally
 make docker-run # Run the container in dev mode
 make docker-push # Upload image to Yandex Container Registry
-``
+```
