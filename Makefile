@@ -24,4 +24,14 @@ lint:
 lint-fix:
 	./gradlew spotlessApply
 
+docker-build:
+	docker build -t project-devops-deploy:latest .
+
+docker-run:
+	docker run --rm -p 8080:8080 -p 9090:9090 -e SPRING_PROFILES_ACTIVE=dev project-devops-deploy:latest
+
+docker-push:
+	docker tag project-devops-deploy:latest cr.yandex/crpgijcppnikm2kto13q/project-devops-deploy:latest
+	docker push cr.yandex/crpgijcppnikm2kto13q/project-devops-deploy:latest
+
 .PHONY: build
