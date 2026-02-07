@@ -1,4 +1,5 @@
 # Project DevOps Deploy - Hexlet Third Project
+[![.github/workflows/ci-cd.yml](https://github.com/mkr-msk/project-devops-deploy/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/mkr-msk/project-devops-deploy/actions/workflows/ci-cd.yml)
 
 This project is an educational bulletin board application developed as part of the third Hexlet DevOps project.
 
